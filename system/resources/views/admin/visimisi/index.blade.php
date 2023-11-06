@@ -28,7 +28,7 @@
                                     <button class="btn btn-warning" data-toggle="modal" data-target="#modal-lg{{ $visimisi->id }}"><span
                                         class="fa fa-edit"></span> Edit</button>
 
-                                    <a onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini?')" href="{{ url("delete-visi-misi/$visimisi->id") }}" class="btn btn-danger"><span
+                                    <a onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini?')" href="{{ url("admin/delete-visi-misi/$visimisi->id") }}" class="btn btn-danger"><span
                                             class="fa fa-trash"></span> Hapus</a>
                                 </div>
                             </td>
@@ -44,7 +44,7 @@
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
-                                    <form class="form-horizontal" action="{{ url('update-visi-misi', $visimisi->id) }}" method="POST"
+                                    <form class="form-horizontal" action="{{ url('admin/update-visi-misi', $visimisi->id) }}" method="POST"
                                         enctype="multipart/form-data">
                                         @csrf
                                         @method("PUT")
@@ -92,7 +92,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form class="form-horizontal" action="{{ url('store-visi-misi') }}" method="POST"
+                <form class="form-horizontal" action="{{ url('admin/store-visi-misi') }}" method="POST"
                     enctype="multipart/form-data">
                     @csrf
                     <div class="modal-body">

@@ -7,7 +7,7 @@
 
     <div class="card"><br>
         <div class="header">
-            <a href="{{ url('page-pegawai') }}" class="btn btn-info"><span class="fa fa-arrow-left"></span> Kembali</a>
+            <a href="{{ url('admin/page-pegawai') }}" class="btn btn-info"><span class="fa fa-arrow-left"></span> Kembali</a>
         </div>
         <div class="row mt-3">
             <div class="col-lg-4">

@@ -26,13 +26,13 @@
                         <tr>
                             <td class="text-center">
                                 <div class="btn-group">
-                                    <a href="{{ url("show-pegawai/$pegawai->id") }}" class="btn btn-info"><span
+                                    <a href="{{ url("admin/show-pegawai/$pegawai->id") }}" class="btn btn-info"><span
                                             class="fa fa-info"></span> Lihat</a>
 
-                                    <a href="{{ url("edit-pegawai/$pegawai->id") }}" class="btn btn-warning"><span
+                                    <a href="{{ url("admin/edit-pegawai/$pegawai->id") }}" class="btn btn-warning"><span
                                             class="fa fa-edit"></span> Edit</a>
 
-                                    <a onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini?')" href="{{ url("delete-pegawai/$pegawai->id") }}" class="btn btn-danger"><span
+                                    <a onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini?')" href="{{ url("admin/delete-pegawai/$pegawai->id") }}" class="btn btn-danger"><span
                                             class="fa fa-trash"></span> Hapus</a>
                                 </div>
                             </td>
@@ -59,7 +59,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form class="form-horizontal" action="{{ url('store-pegawai') }}" method="POST"
+                <form class="form-horizontal" action="{{ url('admin/store-pegawai') }}" method="POST"
                     enctype="multipart/form-data">
                     @csrf
                     <div class="modal-body">

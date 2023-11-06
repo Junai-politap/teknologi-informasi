@@ -46,7 +46,7 @@
                                                         </button>
                                                     </div>
                                                     <form class="form-horizontal"
-                                                        action="{{ url('update-pedoman', $pedoman->id) }}" method="POST"
+                                                        action="{{ url('admin/update-pedoman', $pedoman->id) }}" method="POST"
                                                         enctype="multipart/form-data">
                                                         @csrf
                                                         @method('PUT')
@@ -127,7 +127,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form class="form-horizontal" action="{{ url('store-pedoman') }}" method="POST"
+                <form class="form-horizontal" action="{{ url('admin/store-pedoman') }}" method="POST"
                     enctype="multipart/form-data">
                     @csrf
                     <input type="text" name="id_jenis_pedoman" value="{{ $jenis_pedoman->id }}" hidden>

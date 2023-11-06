@@ -8,7 +8,7 @@
         <div class="card-header">
             <h3 class="card-title">Tambah Jenis Pelayanan</h3>
         </div>
-        <form class="form-horizontal" action="{{ url('storejenis') }}" method="post">
+        <form class="form-horizontal" action="{{ url('admin/storejenis') }}" method="post">
             @csrf
             <div class="card-body">
                 <div class="form-group row">

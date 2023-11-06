@@ -7,7 +7,7 @@
 <div class="card">
     <h5 class="card-header">Edit Data Survei</h5>
     <div class="card-body">
-        <form id="form" data-parsley-validate="" action="{{ url('update-survei', $survei->id) }}" method="POST" enctype="multipart/form-data">
+        <form id="form" data-parsley-validate="" action="{{ url('admin/update-survei', $survei->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
 

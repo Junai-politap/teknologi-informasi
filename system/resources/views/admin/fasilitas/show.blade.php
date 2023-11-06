@@ -38,7 +38,7 @@
                         <div class="col-md-6">
                             <h4>Tambah Gambar</h4>
                             <div class="py-2 px-3 mt-2">
-                                <form action="{{ url('store-galery') }}" method="POST" enctype="multipart/form-data">
+                                <form action="{{ url('admin/store-galery') }}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <input type="file" class="form-control" name="foto" accept=".jpg, .png, .jpeg"
                                         required>
@@ -53,7 +53,7 @@
                         <div class="col-md-6">
                             <h4>Link Video</h4>
                             <div class="py-2 px-3 mt-2">
-                                <form action="{{ url('store-video') }}" method="POST" enctype="multipart/form-data">
+                                <form action="{{ url('admin/store-video') }}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <textarea name="link" class="form-control"></textarea>
                                     <input type="text" name="id_fasilitas" value="{{ $fasilitas->id }}" hidden>

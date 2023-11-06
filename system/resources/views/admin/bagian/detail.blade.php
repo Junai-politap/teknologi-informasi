@@ -12,7 +12,7 @@
                     class="fa fa-plus"></span> Buat Soal</button>
         </div>
         <div class="header">
-            <a href="{{ url('page-form') }}" class="btn btn-info"><span class="fa fa-arrow-left"></span> Kembali</a>
+            <a href="{{ url('admin/page-form') }}" class="btn btn-info"><span class="fa fa-arrow-left"></span> Kembali</a>
         </div>
         <div class="card-body">
             <table id="example1" class="table table-bordered table-striped">
@@ -44,7 +44,7 @@
                                                             <span aria-hidden="true">&times;</span>
                                                         </button>
                                                     </div>
-                                                    <form class="form-horizontal" action="{{ url('store-jawaban') }}"
+                                                    <form class="form-horizontal" action="{{ url('admin/store-jawaban') }}"
                                                         method="post" enctype="multipart/form-data">
                                                         @csrf
 
@@ -90,7 +90,7 @@
                                                         </button>
                                                     </div>
                                                     <form class="form-horizontal"
-                                                        action="{{ url('update-soal', $soal->id) }}" method="post">
+                                                        action="{{ url('admin/update-soal', $soal->id) }}" method="post">
                                                         @csrf
                                                         @method('PUT')
                                                         <div class="modal-body">
@@ -139,7 +139,7 @@
                                                                 </button>
                                                             </div>
                                                             <form class="form-horizontal"
-                                                                action="{{ url('update-jawaban', $jawaban->id) }}" method="post">
+                                                                action="{{ url('admin/update-jawaban', $jawaban->id) }}" method="post">
                                                                 @csrf
                                                                 @method('PUT')
                                                                 <div class="modal-body">
@@ -167,7 +167,7 @@
                                                 </div>
                                                 @if ($jawaban->id_soal == '97069d29-bd4b-40c8-95a2-a13693248578')
                                                     
-                                                <a href="{{ url("pilihan/$jawaban->id") }}" class="btn btn-primary" style="margin-left: 10%;"><span class="fa fa-plus"></span> Buat Soal</a>
+                                                <a href="{{ url("admin/pilihan/$jawaban->id") }}" class="btn btn-primary" style="margin-left: 10%;"><span class="fa fa-plus"></span> Buat Soal</a>
                                                 @endif
                                             </li>
                                             
@@ -193,7 +193,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form class="form-horizontal" action="{{ url('store-soal') }}" method="post"
+                <form class="form-horizontal" action="{{ url('admin/store-soal') }}" method="post"
                     enctype="multipart/form-data">
                     @csrf
                     <div class="modal-body">

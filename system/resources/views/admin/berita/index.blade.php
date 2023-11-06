@@ -27,7 +27,7 @@
                                 <div class="btn-group">
 
                                     @if ($berita->status == 1)
-                                        <form action="{{ url('arsip-berita', $berita->id) }}" method="post">
+                                        <form action="{{ url('admin/arsip-berita', $berita->id) }}" method="post">
                                             @csrf
                                             @method('PUT')
                                             <button class="btn btn-secondary"><span class="fa fa-archive"></span>
@@ -36,21 +36,21 @@
                                     @endif
 
                                     @if ($berita->status == 2)
-                                        <form action="{{ url('post-berita', $berita->id) }}" method="post">
+                                        <form action="{{ url('admin/post-berita', $berita->id) }}" method="post">
                                             @csrf
                                             @method('PUT')
                                             <button class="btn btn-success"><span class="fa fa-sticky-note"></span>
                                                 Post</button>
                                         </form>
                                     @endif
-                                    <a href="{{ url("show-berita/$berita->id") }}" class="btn btn-info"><span
+                                    <a href="{{ url("admin/show-berita/$berita->id") }}" class="btn btn-info"><span
                                             class="fa fa-info"></span> Lihat</a>
 
-                                    <a href="{{ url("edit-berita/$berita->id") }}" class="btn btn-warning"><span
+                                    <a href="{{ url("admin/edit-berita/$berita->id") }}" class="btn btn-warning"><span
                                             class="fa fa-edit"></span> Edit</a>
 
                                     <a onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini?')"
-                                        href="{{ url("delete-berita/$berita->id") }}" class="btn btn-danger"><span
+                                        href="{{ url("admin/delete-berita/$berita->id") }}" class="btn btn-danger"><span
                                             class="fa fa-trash"></span> Hapus</a>
                                 </div>
                             </td>
@@ -76,7 +76,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form class="form-horizontal" action="{{ url('store-berita') }}" method="POST"
+                <form class="form-horizontal" action="{{ url('admin/store-berita') }}" method="POST"
                     enctype="multipart/form-data">
                     @csrf
                     <div class="modal-body">

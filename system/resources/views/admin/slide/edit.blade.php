@@ -7,7 +7,7 @@
     <div class="card">
         <h5 class="card-header">Edit Slide</h5>
         <div class="card-body">
-            <form id="form" data-parsley-validate="" action="{{ url('update-slide', $slide->id) }}" method="POST"
+            <form id="form" data-parsley-validate="" action="{{ url('admin/update-slide', $slide->id) }}" method="POST"
                 enctype="multipart/form-data">
                 @csrf
                 @method("PUT")

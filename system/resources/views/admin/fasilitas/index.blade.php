@@ -28,14 +28,14 @@
                         <tr>
                             <td class="text-center">
                                 <div class="btn-group">
-                                    <a href="{{ url("show-fasilitas/$fasilitas->id") }}" class="btn btn-info"><span
+                                    <a href="{{ url("admin/show-fasilitas/$fasilitas->id") }}" class="btn btn-info"><span
                                             class="fa fa-info"></span> Lihat</a>
 
-                                    <a href="{{ url("edit-fasilitas/$fasilitas->id") }}" class="btn btn-warning"><span
+                                    <a href="{{ url("admin/edit-fasilitas/$fasilitas->id") }}" class="btn btn-warning"><span
                                             class="fa fa-edit"></span> Edit</a>
 
                                     <a onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini?')"
-                                        href="{{ url("delete-fasilitas/$fasilitas->id") }}" class="btn btn-danger"><span
+                                        href="{{ url("admin/delete-fasilitas/$fasilitas->id") }}" class="btn btn-danger"><span
                                             class="fa fa-trash"></span> Hapus</a>
                                 </div>
                             </td>
@@ -58,7 +58,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form class="form-horizontal" action="{{ url('store-fasilitas') }}" method="POST"
+                <form class="form-horizontal" action="{{ url('admin/store-fasilitas') }}" method="POST"
                     enctype="multipart/form-data">
                     @csrf
                     <div class="modal-body">
@@ -126,7 +126,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form class="form-horizontal" action="{{ url('store-jenis-fasilitas') }}" method="POST"
+                <form class="form-horizontal" action="{{ url('admin/store-jenis-fasilitas') }}" method="POST"
                     enctype="multipart/form-data">
                     @csrf
                     <div class="modal-body">

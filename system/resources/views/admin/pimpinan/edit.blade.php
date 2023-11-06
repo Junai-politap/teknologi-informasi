@@ -9,7 +9,7 @@
             <h3 class="text-center"><strong>Edit Data Pimpinan</strong></h3>
         </div>
         <div class="card-body">
-            <form class="form-horizontal" action="{{ url('update-pimpinan', $pimpinan->id) }}" method="POST" enctype="multipart/form-data">
+            <form class="form-horizontal" action="{{ url('admin/update-pimpinan', $pimpinan->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method("PUT")
                 <div class="modal-body">

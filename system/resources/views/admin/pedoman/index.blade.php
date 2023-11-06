@@ -31,10 +31,10 @@
                             <td class="text-center"> {{ $no++ }}</td>
                             <td class="text-center">
                                 <div class="btn-group">
-                                    <a href="{{ url("show-jenis-pedoman/$jenis_pedoman->id") }}" class="btn btn-info"><span
+                                    <a href="{{ url("admin/show-jenis-pedoman/$jenis_pedoman->id") }}" class="btn btn-info"><span
                                             class="fa fa-info"></span> Lihat</a>
 
-                                    <a href="{{ url("edit-jenis-pedoman/$jenis_pedoman->id") }}"
+                                    <a href="{{ url("admin/edit-jenis-pedoman/$jenis_pedoman->id") }}"
                                         class="btn btn-warning"><span class="fa fa-edit"></span> Edit</a>
 
                                     {{-- <a href="{{ url("delete-jenis-pedoman/$jenis_pedoman->id") }}" class="btn btn-danger"><span

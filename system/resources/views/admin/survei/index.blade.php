@@ -24,11 +24,11 @@
                 <tr>
                     <td class="text-center">
                         <div class="btn-group">
-                            <a href="{{ url("show-survei/$survei->id") }}" class="btn btn-info"><span class="fa fa-info"></span> Lihat</a>
+                            <a href="{{ url("admin/show-survei/$survei->id") }}" class="btn btn-info"><span class="fa fa-info"></span> Lihat</a>
 
-                            <a href="{{ url("edit-survei/$survei->id") }}" class="btn btn-warning"><span class="fa fa-edit"></span> Edit</a>
+                            <a href="{{ url("admin/edit-survei/$survei->id") }}" class="btn btn-warning"><span class="fa fa-edit"></span> Edit</a>
 
-                            <a onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini?')" href="{{ url("delete-survei/$survei->id") }}" class="btn btn-danger"><span class="fa fa-trash"></span> Hapus</a>
+                            <a onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini?')" href="{{ url("admin/delete-survei/$survei->id") }}" class="btn btn-danger"><span class="fa fa-trash"></span> Hapus</a>
                         </div>
                     </td>
                     <td class="text-center">{{ $survei->judul }}</td>
@@ -50,7 +50,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form class="form-horizontal" action="{{ url('store-survei') }}" method="POST" enctype="multipart/form-data">
+            <form class="form-horizontal" action="{{ url('admin/store-survei') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="modal-body">
                     <div class="card-body">

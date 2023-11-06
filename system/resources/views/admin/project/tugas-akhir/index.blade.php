@@ -27,12 +27,12 @@
                             <td class="text-center">
                                 <div class="btn-group">
 
-                                    <a href="{{ url("lihat-tugas-akhir/$tugas_akhir->id") }}" class="btn btn-info"><span class="fa fa-info"></span> Lihat</a>
+                                    <a href="{{ url("admin/lihat-tugas-akhir/$tugas_akhir->id") }}" class="btn btn-info"><span class="fa fa-info"></span> Lihat</a>
 
-                                    <a href="{{ url("edit-tugas-akhir/$tugas_akhir->id") }}" class="btn btn-warning"><span class="fa fa-edit"></span> Edit</a>
+                                    <a href="{{ url("admin/edit-tugas-akhir/$tugas_akhir->id") }}" class="btn btn-warning"><span class="fa fa-edit"></span> Edit</a>
 
                                     <a onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini?')"
-                                        href="{{ url("delete-tugas-akhir/$tugas_akhir->id") }}" class="btn btn-danger">
+                                        href="{{ url("admin/delete-tugas-akhir/$tugas_akhir->id") }}" class="btn btn-danger">
                                         <span class="fa fa-trash"></span> Hapus
                                     </a>
 
@@ -58,7 +58,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form class="form-horizontal" action="{{ url('store-tugas-akhir') }}" method="POST"
+                <form class="form-horizontal" action="{{ url('admin/store-tugas-akhir') }}" method="POST"
                     enctype="multipart/form-data">
                     @csrf
                     <div class="modal-body">

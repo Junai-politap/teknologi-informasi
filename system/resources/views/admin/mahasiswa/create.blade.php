@@ -9,7 +9,7 @@
             <h3 class="card-title"><strong> Data Mahasiswa</strong></h3>
         </div>
         <div class="card-body">
-            <form class="form-horizontal" action="{{ url('store-mahasiswa') }}" method="POST" enctype="multipart/form-data">
+            <form class="form-horizontal" action="{{ url('admin/store-mahasiswa') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="modal-body">
                     <div class="card-body">

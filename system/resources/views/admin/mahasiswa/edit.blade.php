@@ -9,7 +9,7 @@
             <h3 class="card-title"><strong> Data Mahasiswa</strong></h3>
         </div>
         <div class="card-body">
-            <form class="form-horizontal" action="{{ url('update-mahasiswa', $mahasiswa->id) }}" method="POST"
+            <form class="form-horizontal" action="{{ url('admin/update-mahasiswa', $mahasiswa->id) }}" method="POST"
                 enctype="multipart/form-data">
                 @csrf
                 @method('PUT')

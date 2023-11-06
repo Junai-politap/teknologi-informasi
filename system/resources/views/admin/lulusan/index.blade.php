@@ -28,7 +28,7 @@
                                     <button class="btn btn-warning" data-toggle="modal" data-target="#modal-lg{{ $lulusan->id }}"><span
                                         class="fa fa-edit"></span> Edit</button>
 
-                                    <a onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini?')" href="{{ url("delete-lulusan/$lulusan->id") }}" class="btn btn-danger"><span
+                                    <a onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini?')" href="{{ url("admin/delete-lulusan/$lulusan->id") }}" class="btn btn-danger"><span
                                             class="fa fa-trash"></span> Hapus</a>
                                 </div>
                             </td>
@@ -45,7 +45,7 @@
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
-                                    <form class="form-horizontal" action="{{ url('update-lulusan', $lulusan->id) }}" method="POST"
+                                    <form class="form-horizontal" action="{{ url('admin/update-lulusan', $lulusan->id) }}" method="POST"
                                         enctype="multipart/form-data">
                                         @csrf
                                         @method("PUT")
@@ -93,7 +93,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form class="form-horizontal" action="{{ url('store-lulusan') }}" method="POST"
+                <form class="form-horizontal" action="{{ url('admin/store-lulusan') }}" method="POST"
                     enctype="multipart/form-data">
                     @csrf
                     <div class="modal-body">

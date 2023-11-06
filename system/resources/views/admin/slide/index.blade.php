@@ -22,13 +22,13 @@
                     <tr>
                         <td class="text-center">
                             <div class="btn-group">
-                                <a href="{{ url("show-slide/$slide->id") }}" class="btn btn-info"><span
+                                <a href="{{ url("admin/show-slide/$slide->id") }}" class="btn btn-info"><span
                                         class="fa fa-info"></span> Lihat</a>
 
-                                <a href="{{ url("edit-slide/$slide->id") }}" class="btn btn-warning"><span
+                                <a href="{{ url("admin/edit-slide/$slide->id") }}" class="btn btn-warning"><span
                                         class="fa fa-edit"></span> Edit</a>
 
-                                <a onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini?')" href="{{ url("delete-slide/$slide->id") }}" class="btn btn-danger"><span
+                                <a onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini?')" href="{{ url("admin/delete-slide/$slide->id") }}" class="btn btn-danger"><span
                                         class="fa fa-trash"></span> Hapus</a>
                             </div>
                         </td>
@@ -51,7 +51,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form class="form-horizontal" action="{{ url('store-slide') }}" method="post"
+            <form class="form-horizontal" action="{{ url('admin/store-slide') }}" method="post"
                 enctype="multipart/form-data">
                 @csrf
                 <div class="modal-body">

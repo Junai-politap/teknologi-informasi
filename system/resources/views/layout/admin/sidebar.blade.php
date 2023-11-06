@@ -1,11 +1,11 @@
 @php
 
-function checkRouteActive($route)
-{
-    if (Route::current()->uri == $route) {
-        return 'active';
+    function checkRouteActive($route)
+    {
+        if (Route::current()->uri == $route) {
+            return 'active';
+        }
     }
-}
 @endphp
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
 
@@ -21,15 +21,16 @@ function checkRouteActive($route)
                 <img src="{{ url('public/admin') }}/logo.ico" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block"> Super Admin</a>
+                <a href="{{ url('admin') }}" class="d-block"> Super Admin</a>
             </div>
         </div>
 
         <nav class="mt-2">
-            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                data-accordion="false">
 
                 <li class="nav-item has-treeview menu-open">
-                    <a href="{{ url('page-admin') }}" class="nav-link {{ checkRouteActive('page-admin') }}">
+                    <a href="{{ url('admin') }}" class="nav-link {{ checkRouteActive('admin/page-admin') }}">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Dashboard
@@ -46,45 +47,49 @@ function checkRouteActive($route)
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                            
+
                         <li class="nav-item">
-                            <a href="{{ url('page-pimpinan') }}" class="nav-link {{ checkRouteActive('page-pegawai') }}">
+                            <a href="{{ url('admin/page-pimpinan') }}"
+                                class="nav-link {{ checkRouteActive('admin/page-pegawai') }}">
                                 <i class="fa fa-minus nav-icon"></i>
                                 <p>Pimpinan</p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{ url('page-pegawai') }}" class="nav-link {{ checkRouteActive('page-pegawai') }}">
+                            <a href="{{ url('admin/page-pegawai') }}" class="nav-link {{ checkRouteActive('admin/page-pegawai') }}">
                                 <i class="fa fa-minus nav-icon"></i>
                                 <p>Pegawai Prodi</p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{ url('page-mahasiswa') }}" class="nav-link {{ checkRouteActive('page-mahasiswa') }}">
+                            <a href="{{ url('admin/page-mahasiswa') }}"
+                                class="nav-link {{ checkRouteActive('admin/page-mahasiswa') }}">
                                 <i class="fa fa-minus nav-icon"></i>
                                 <p>
                                     Mahasiswa
                                 </p>
                             </a>
-        
+
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{ url('page-visi-misi') }}" class="nav-link {{ checkRouteActive('page-visi-misi') }}">
+                            <a href="{{ url('admin/page-visi-misi') }}"
+                                class="nav-link {{ checkRouteActive('admin/page-visi-misi') }}">
                                 <i class="fa fa-minus nav-icon"></i>
                                 <p>Visi & Misi</p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{ url('page-lulusan') }}" class="nav-link {{ checkRouteActive('page-lulusan') }}">
+                            <a href="{{ url('admin/page-lulusan') }}"
+                                class="nav-link {{ checkRouteActive('admin/page-lulusan') }}">
                                 <i class="fa fa-minus nav-icon"></i>
                                 <p>Profil Lulusan</p>
                             </a>
                         </li>
-                       
+
                     </ul>
                 </li>
 
@@ -98,34 +103,39 @@ function checkRouteActive($route)
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ url('page-kurikulum') }}" class="nav-link {{ checkRouteActive('page-kurikulum') }}">
+                            <a href="{{ url('admin/page-kurikulum') }}"
+                                class="nav-link {{ checkRouteActive('admin/page-kurikulum') }}">
                                 <i class="fa fa-minus nav-icon"></i>
                                 <p>Kurikulum</p>
                             </a>
                         </li>
-                      
+
                         <li class="nav-item">
-                            <a href="{{ url('page-akreditasi') }}" class="nav-link {{ checkRouteActive('page-akreditasi') }}">
+                            <a href="{{ url('admin/page-akreditasi') }}"
+                                class="nav-link {{ checkRouteActive('admin/page-akreditasi') }}">
                                 <i class="fa fa-minus nav-icon"></i>
                                 <p>Akreditasi</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ url('page-pedoman') }}" class="nav-link {{ checkRouteActive('page-pedoman') }}">
+                            <a href="{{ url('admin/page-pedoman') }}"
+                                class="nav-link {{ checkRouteActive('admin/page-pedoman') }}">
                                 <i class="fa fa-minus nav-icon"></i>
                                 <p>Pedoman</p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{ url('page-fasilitas') }}" class="nav-link {{ checkRouteActive('page-fasilitas') }}">
+                            <a href="{{ url('admin/page-fasilitas') }}"
+                                class="nav-link {{ checkRouteActive('admin/page-fasilitas') }}">
                                 <i class="fa fa-minus nav-icon"></i>
                                 <p>Fasilitas</p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{ url('page-pelayanan') }}" class="nav-link {{ checkRouteActive('page-pelayanan') }}">
+                            <a href="{{ url('admin/page-pelayanan') }}"
+                                class="nav-link {{ checkRouteActive('admin/page-pelayanan') }}">
                                 <i class="fa fa-minus nav-icon"></i>
                                 <p>Pelayanan</p>
                             </a>
@@ -142,61 +152,46 @@ function checkRouteActive($route)
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                                              
+
                         <li class="nav-item">
-                            <a href="{{ url('page-pbl') }}" class="nav-link {{ checkRouteActive('page-pbl') }}">
+                            <a href="{{ url('admin/page-pbl') }}" class="nav-link {{ checkRouteActive('admin/page-pbl') }}">
                                 <i class="fa fa-minus nav-icon"></i>
                                 <p>PBL</p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{ url('page-tugas-akhir') }}" class="nav-link {{ checkRouteActive('page-tugas-akhir') }}">
+                            <a href="{{ url('admin/page-tugas-akhir') }}"
+                                class="nav-link {{ checkRouteActive('admin/page-tugas-akhir') }}">
                                 <i class="fa fa-minus nav-icon"></i>
                                 <p>
                                     Tugas Akhir
                                 </p>
                             </a>
-        
+
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{ url('page-penelitian') }}" class="nav-link {{ checkRouteActive('page-penelitian-dosen') }}">
+                            <a href="{{ url('admin/page-penelitian') }}"
+                                class="nav-link {{ checkRouteActive('admin/page-penelitian-dosen') }}">
                                 <i class="fa fa-minus nav-icon"></i>
                                 <p>Penelitian Dosen</p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{ url('page-pengabdian') }}" class="nav-link {{ checkRouteActive('page-pengabdian-dosen') }}">
+                            <a href="{{ url('admin/page-pengabdian') }}"
+                                class="nav-link {{ checkRouteActive('admin/page-pengabdian-dosen') }}">
                                 <i class="fa fa-minus nav-icon"></i>
                                 <p>Pengabdian Dosen</p>
                             </a>
                         </li>
-                       
+
                     </ul>
                 </li>
 
-                {{-- <li class="nav-item has-treeview">
-                    <a href="{{ url('page-prodi') }}" class="nav-link {{ checkRouteActive('page-prodi') }}">
-                        <i class="nav-icon fa fa-university"></i>
-                        <p>
-                            Program Studi
-                        </p>
-                    </a>
-                </li> --}}
-
-                {{-- <li class="nav-item has-treeview">
-                    <a href="{{ url('page-form') }}" class="nav-link {{ checkRouteActive('page-form') }}">
-                        <i class="nav-icon fa fa-list"></i>
-                        <p>
-                            Form Bagaian
-                        </p>
-                    </a>
-                </li> --}}
-
                 <li class="nav-item has-treeview">
-                    <a href="{{ url('page-form') }}" class="nav-link {{ checkRouteActive('page-form') }}">
+                    <a href="{{ url('admin/page-form') }}" class="nav-link {{ checkRouteActive('admin/page-form') }}">
                         <i class="nav-icon fa fa-industry"></i>
                         <p>
                             Tracer Study
@@ -204,17 +199,149 @@ function checkRouteActive($route)
                     </a>
                 </li>
 
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon far fa-plus-square"></i>
+                        <p>
+                            Laporan Tracer
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fa fa-check nav-icon"></i>
+                                <p>
+                                    Bekerja
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ url('admin/laporan-tracer/bekerja/masa-tunggu') }}" class="nav-link">
+                                        <i class="fa fa-minus nav-icon"></i>
+                                        <p>Masa Tunggu</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ url('admin/laporan-tracer/bekerja/kategori-pekerjaan') }}" class="nav-link">
+                                        <i class="fa fa-minus nav-icon"></i>
+                                        <p>Kategori Pekerjaan</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ url('admin/laporan-tracer/bekerja/pendapatan-pertama') }}" class="nav-link">
+                                        <i class="fa fa-minus nav-icon"></i>
+                                        <p> Pendapatan Pertama</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ url('admin/laporan-tracer/bekerja/jenis-pekerjaan') }}" class="nav-link">
+                                        <i class="fa fa-minus nav-icon"></i>
+                                        <p> Jenis Pekerjaan</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ url('admin/laporan-tracer/bekerja/kesesuaian') }}" class="nav-link">
+                                        <i class="fa fa-minus nav-icon"></i>
+                                        <p> Kesesuian</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ url('admin/laporan-tracer/bekerja/cara-mendapatkan-pekerjaan') }}" class="nav-link">
+                                        <i class="fa fa-minus nav-icon"></i>
+                                        <p> Cara Mendapatkan <br>Info Lowongan</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="fa fa-check nav-icon"></i>
+                                <p>
+                                    Wirausaha
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ url('admin/laporan-tracer/wirausaha/posisi-jabatan') }}" class="nav-link">
+                                        <i class="fa fa-minus nav-icon"></i>
+                                        <p>Posisi/Jabatan</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ url('admin/laporan-tracer/wirausaha/pendapatan-pertama') }}" class="nav-link">
+                                        <i class="fa fa-minus nav-icon"></i>
+                                        <p>Pendapatan Pertama</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ url('admin/laporan-tracer/wirausaha/masa-tunggu') }}" class="nav-link">
+                                        <i class="fa fa-minus nav-icon"></i>
+                                        <p> Masa Tunggu</p>
+                                    </a>
+                                </li>
+                               
+                                <li class="nav-item">
+                                    <a href="{{ url('admin/laporan-tracer/wirausaha/kesesuaian') }}" class="nav-link">
+                                        <i class="fa fa-minus nav-icon"></i>
+                                        <p> Kesesuian</p>
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fa fa-check nav-icon"></i>
+                                <p>
+                                    Studi Lanjut
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ url('admin/laporan-tracer/studi-lanjut/jenjang-studi-lanjut') }}" class="nav-link">
+                                        <i class="fa fa-minus nav-icon"></i>
+                                        <p>Jenjang Studi Lanjut</p>
+                                    </a>
+                                </li>
+
+                                
+                                <li class="nav-item">
+                                    <a href="{{ url('admin/laporan-tracer/studi-lanjut/alasan-studi-lanjut') }}" class="nav-link">
+                                        <i class="fa fa-minus nav-icon"></i>
+                                        <p>Alasan Studi Lanjut</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ url('admin/laporan-tracer/studi-lanjut/biaya') }}" class="nav-link">
+                                        <i class="fa fa-minus nav-icon"></i>
+                                        <p>Pembiayaan</p>
+                                    </a>
+                                </li>
+                               
+                               
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+                
                 <li class="nav-item has-treeview">
-                    <a href="{{ url('page-survei') }}" class="nav-link {{ checkRouteActive('survei') }}">
+                    <a href="{{ url('admin/page-survei') }}" class="nav-link {{ checkRouteActive('admin/survei') }}">
                         <i class="nav-icon fa fa-file"></i>
                         <p>
-                            Survei
+                            Laporan Survei
                         </p>
                     </a>
                 </li>
 
                 <li class="nav-item has-treeview">
-                    <a href="{{ url('page-berita') }}" class="nav-link {{ checkRouteActive('page-berita') }}">
+                    <a href="{{ url('admin/page-berita') }}" class="nav-link {{ checkRouteActive('admin/page-berita') }}">
                         <i class="nav-icon fa fa-newspaper"></i>
                         <p>
                             Berita
@@ -223,7 +350,7 @@ function checkRouteActive($route)
 
                 </li>
                 <li class="nav-item has-treeview">
-                    <a href="{{ url('page-slide') }}" class="nav-link {{ checkRouteActive('page-slide') }}">
+                    <a href="{{ url('admin/page-slide') }}" class="nav-link {{ checkRouteActive('admin/page-slide') }}">
                         <i class="nav-icon fa fa-home"></i>
                         <p>
                             Home Base
@@ -234,7 +361,7 @@ function checkRouteActive($route)
 
                 <li class="nav-item has-treeview">
                     <a onclick="return confirm('Apakah Anda Yakin Ingin Keluar?')" href="{{ url('logout') }}"
-                        class="nav-link {{ checkRouteActive('logout') }}">
+                        class="nav-link {{ checkRouteActive('admin/logout') }}">
                         <i class="nav-icon fa fa-arrow-circle-left"></i>
                         <p>
                             Loguot

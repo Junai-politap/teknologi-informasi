@@ -124,7 +124,7 @@
             <button class="btn btn-primary float-right" style="margin-left: 1%" data-toggle="modal"
                 data-target="#modal-md"><span class="fa fa-plus"></span> Tambah Data</button>
 
-            <a href="{{ url('hasil-survey') }}" class="btn btn-success float-right"><span class="fa fa-industry"></span>
+            <a href="{{ url('admin/hasil-survey') }}" class="btn btn-success float-right"><span class="fa fa-industry"></span>
                 Hasil Survey</a>
         </div>
         <div class="card-body">
@@ -146,7 +146,7 @@
                                             class="fa fa-industry"></span> Hasil Survey</a> --}}
 
 
-                                    <a href="{{ url("detail/$bagian->id") }}" class="btn btn-info"><span
+                                    <a href="{{ url("admin/detail/$bagian->id") }}" class="btn btn-info"><span
                                             class="fa fa-info"></span> Lihat</a>
 
                                     <button class="btn btn-warning" data-toggle="modal"
@@ -163,7 +163,7 @@
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
                                                 </div>
-                                                <form class="form-horizontal" action="{{ url('update-form', $bagian->id) }}"
+                                                <form class="form-horizontal" action="{{ url('admin/update-form', $bagian->id) }}"
                                                     method="post" enctype="multipart/form-data">
                                                     @csrf
                                                     @method('PUT')
@@ -226,7 +226,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form class="form-horizontal" action="{{ url('store-form') }}" method="post"
+                <form class="form-horizontal" action="{{ url('admin/store-form') }}" method="post"
                     enctype="multipart/form-data">
                     @csrf
                     <div class="modal-body">

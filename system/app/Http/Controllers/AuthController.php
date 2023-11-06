@@ -16,7 +16,7 @@ class AuthController extends Controller
 
     public function loginproses(){
         if (auth()->attempt(['username' => request('username'), 'password' => request('password')])) {
-            return redirect('page-admin');
+            return redirect('admin');
         }
 
         if (auth()->guard('mahasiswa')->attempt(['username' => request('username'), 'password' => request('password')])){

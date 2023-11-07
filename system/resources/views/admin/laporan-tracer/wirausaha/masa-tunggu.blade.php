@@ -100,6 +100,16 @@
 </div>
 
 <div class="row">
+    <div class="col-12 col-sm-12 col-md-12">
+        <div class="">
+            <figure class="highcharts">
+                <div id="masa_tunggu_all"></div>
+                
+              </figure>
+        </div>
+    </div>
+</div>
+<div class="row">
     <div class="col-12 col-sm-6 col-md-6">
         <div class="info-box">
             <figure class="highcharts">
@@ -161,6 +171,58 @@
 
 
 <script>
+
+Highcharts.chart('masa_tunggu_all', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: 'Kapan Waktu yang diperlukan untuk mulai berwirusaha',
+            align: 'left'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.0f}%</b>'
+        },
+        accessibility: {
+            point: {
+                valueSuffix: '%'
+            }
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.0f} %'
+                }
+            }
+        },
+        series: [{
+            name: 'Jumlah',
+            colorByPoint: true,
+            data: [{
+                name: '0 Bulan/Langsung Bekerja/Dipesan Sebelum Lulus',
+                y: {{$langsung_bekerja}},
+                sliced: true,
+                selected: true
+            }, {
+                name: 'Waktu Tunggu Kurang dari 3 Bulan',
+                y: {{$kurang_dari_3_bulan}}
+            }, {
+                name: 'Waktu Tunggu Antara 3 - 6 Bulan',
+                y: {{$kurang_dari_6_bulan}}
+            }, {
+                name: 'Waktu Tunggu Lebih dari 6 Bulan',
+                y: {{$lebih_dari_6_bulan}}
+            
+            }]
+        }]
+    });
+
     // Data retrieved from https://netmarketshare.com
     Highcharts.chart('masa_tunggu_2015', {
         chart: {

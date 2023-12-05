@@ -46,6 +46,19 @@
     <div class="row">
         <div class="col-12 col-sm-12 col-md-12">
             <div class="">
+<<<<<<< HEAD
+=======
+                <figure class="highcharts">
+                    <div id="gaji_all"></div>
+
+                </figure>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-6">
+            <div class="info-box">
+>>>>>>> e4586ba35c58951628b951ff93b572b1bd656cca
                 <figure class="highcharts">
                     <div id="gaji_all"></div>
 
@@ -74,7 +87,11 @@
                 type: 'pie'
             },
             title: {
+<<<<<<< HEAD
                 text: 'Data Persentase Pendapatan Pertama Saat Bekerja',
+=======
+                text: 'Pendapatan Pertama Saat Bekerja',
+>>>>>>> e4586ba35c58951628b951ff93b572b1bd656cca
                 align: 'left'
             },
             tooltip: {
@@ -91,7 +108,11 @@
                     cursor: 'pointer',
                     dataLabels: {
                         enabled: true,
+<<<<<<< HEAD
                         format: '<b>{point.name}</b>: {point.y} Orang ({point.percentage:.0f}%) '
+=======
+                        format: '<b>{point.name}</b>: {point.percentage:.0f} %'
+>>>>>>> e4586ba35c58951628b951ff93b572b1bd656cca
                     }
                 }
             },

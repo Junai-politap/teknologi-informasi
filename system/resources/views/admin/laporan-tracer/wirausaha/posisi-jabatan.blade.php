@@ -41,8 +41,78 @@
         }
     </style>
     <script src="https://code.highcharts.com/highcharts.js"></script>
+<<<<<<< HEAD
     @include('admin.laporan-tracer.laporan')
+=======
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box">
+                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-building"></i></span>
 
+                <div class="info-box-content">
+                    <span class="info-box-text">Sudah Bekerja</span>
+                    <span class="info-box-number">
+                        {{ $bekerja }}
+                        <small></small>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box">
+                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-shopping-bag"></i></span>
+
+                <div class="info-box-content">
+                    <span class="info-box-text">Wiraswasta</span>
+                    <span class="info-box-number">
+                        {{ $wiraswasta }}
+                        <small></small>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box">
+                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-university"></i></span>
+
+                <div class="info-box-content">
+                    <span class="info-box-text">Studi Lanjut</span>
+                    <span class="info-box-number">
+                        {{ $studi_lanjut }}
+                        <small></small>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box">
+                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-user"></i></span>
+
+                <div class="info-box-content">
+                    <span class="info-box-text">Belum Bekerja</span>
+                    <span class="info-box-number">
+                        {{ $belum_bekerja }}
+                        <small></small>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12">
+            <div class="">
+                <figure class="highcharts">
+                    <div id="posisi_all"></div>
+>>>>>>> e4586ba35c58951628b951ff93b572b1bd656cca
+
+                </figure>
+            </div>
+        </div>
+    </div>
     <div class="row">
         <div class="col-12 col-sm-12 col-md-12">
             <div class="">
@@ -67,7 +137,11 @@
     </div>
 
     <script>
+<<<<<<< HEAD
         Highcharts.chart('posisi_all', {
+=======
+         Highcharts.chart('posisi_all', {
+>>>>>>> e4586ba35c58951628b951ff93b572b1bd656cca
             chart: {
                 plotBackgroundColor: null,
                 plotBorderWidth: null,
@@ -75,7 +149,11 @@
                 type: 'pie'
             },
             title: {
+<<<<<<< HEAD
                 text: 'Data Persentase Posisi/jabatan Alumni',
+=======
+                text: 'Bila berwiraswasta, apa posisi/jabatan Anda saat ini',
+>>>>>>> e4586ba35c58951628b951ff93b572b1bd656cca
                 align: 'left'
             },
             tooltip: {
@@ -92,7 +170,11 @@
                     cursor: 'pointer',
                     dataLabels: {
                         enabled: true,
+<<<<<<< HEAD
                         format: '<b>{point.name}</b>: {point.y} Orang ({point.percentage:.0f}%) '
+=======
+                        format: '<b>{point.name}</b>: {point.percentage:.0f} %'
+>>>>>>> e4586ba35c58951628b951ff93b572b1bd656cca
                     }
                 }
             },
@@ -101,15 +183,26 @@
                 colorByPoint: true,
                 data: [{
                     name: 'Founder/Co-Founder (Pendiri/Pemilik)',
+<<<<<<< HEAD
                     y: {{ $pemilik }},
+=======
+                    y: {{$pemilik}},
+>>>>>>> e4586ba35c58951628b951ff93b572b1bd656cca
                     sliced: true,
                     selected: true
                 }, {
                     name: 'Staff',
+<<<<<<< HEAD
                     y: {{ $staff }}
                 }, {
                     name: 'Freelance/Kerja Lepas',
                     y: {{ $freelance }}
+=======
+                    y: {{$staff}}
+                }, {
+                    name: 'Freelance/Kerja Lepas',
+                    y: {{$freelance}}
+>>>>>>> e4586ba35c58951628b951ff93b572b1bd656cca
                 }]
             }]
         });
